@@ -9,15 +9,15 @@
     <title>Deep Codex</title>
   </head>
   <body>
-    <p><a href="../index.html">Deep Codex</a> - pinch to zoom out</p>
+    <a href="../index.html">Deep Codex</a>
     <img src="varaha-0.2-web.png" alt="varaha">
     <canvas class="genesis" data-processing-sources="genesis.pde"></canvas>
     <canvas class="invocation" data-processing-sources="invocation.pde"></canvas>
   </body>
   <style>
     body { margin: 0; background-color: #000; font-family: sans serif }
-    p { color: white; z-index: 1; position: absolute; padding: 5px; margin: 0 }
-    a { color: white; text-decoration: none; font-weight: bold }
+    a { z-index: 1; position: absolute; padding: 5px; color: white; text-decoration: none; font-weight: bold }
+    @media (max-width: 600px) { a:after { color: white; content: " - pinch to zoom" } }
     a:hover { color: #a2a017 }
     div { border: 1px solid black }
     img { position: absolute; zoom: 55% }
