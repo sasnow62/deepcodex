@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/processing.min.js"></script>
+    <title>Deep Codex</title>
+  </head>
+  <body>
+    <a href="../index.html">Deep Codex</a>
+    <img src="varaha-0.2-web.png" alt="varaha">
+    <canvas class="genesis" data-processing-sources="genesis.pde"></canvas>
+    <canvas class="invocation" data-processing-sources="invocation.pde"></canvas>
+  </body>
+  <style>
+    body { margin: 0; background-color: #000; font-family: sans serif }
+    a { z-index: 1; position: absolute; padding: 5px; color: white; text-decoration: none; font-weight: bold }
+    a:hover { color: #a2a017 }
+    div { border: 1px solid black }
+    img { position: absolute; zoom: 55% }
+    canvas { position: absolute; outline : none; cursor: pointer; zoom: 55% }
+    .genesis { height: 400px; left: 1700px; top: 350px }
+    .invocation { height: 200px; left: 340px;top: 680px }
+  </style>
+</html>

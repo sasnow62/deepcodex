@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'enki';
+  src: url('../font/enki.eot?28374283');
+  src: url('../font/enki.eot?28374283#iefix') format('embedded-opentype'),
+       url('../font/enki.woff2?28374283') format('woff2'),
+       url('../font/enki.woff?28374283') format('woff'),
+       url('../font/enki.ttf?28374283') format('truetype'),
+       url('../font/enki.svg?28374283#enki') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'enki';
+    src: url('../font/enki.svg?28374283#enki') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "enki";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-play:before { content: '\e800'; } /* '' */
+.icon-adjust:before { content: '\e801'; } /* '' */
+.icon-water:before { content: '\e802'; } /* '' */
+.icon-flow-cascade:before { content: '\e803'; } /* '' */
+.icon-flow-branch:before { content: '\e804'; } /* '' */
+.icon-flow-tree:before { content: '\e805'; } /* '' */
+.icon-flow-line:before { content: '\e806'; } /* '' */
+.icon-flow-parallel:before { content: '\e807'; } /* '' */
+.icon-news:before { content: '\e808'; } /* '' */
+.icon-doc-text:before { content: '\e809'; } /* '' */
+.icon-looped-square-interest:before { content: '\e80a'; } /* '' */
+.icon-article-alt:before { content: '\e80b'; } /* '' */
+.icon-article:before { content: '\e80c'; } /* '' */
+.icon-target:before { content: '\e80d'; } /* '' */
+.icon-layers-alt:before { content: '\e80e'; } /* '' */
+.icon-layers:before { content: '\e80f'; } /* '' */
+.icon-list-nested:before { content: '\e810'; } /* '' */
+.icon-sun:before { content: '\e811'; } /* '' */
+.icon-sun-inv:before { content: '\e812'; } /* '' */
+.icon-moon-inv:before { content: '\e813'; } /* '' */
+.icon-cd:before { content: '\e814'; } /* '' */
+.icon-comment:before { content: '\e815'; } /* '' */
+.icon-chat:before { content: '\e816'; } /* '' */
+.icon-spin1:before { content: '\e830'; } /* '' */
+.icon-spin1-1:before { content: '\e834'; } /* '' */
+.icon-spin2:before { content: '\e839'; } /* '' */
+.icon-town-hall:before { content: '\e83c'; } /* '' */
+.icon-tasks:before { content: '\f0ae'; } /* '' */
+.icon-circle:before { content: '\f111'; } /* '' */
+.icon-bank:before { content: '\f19c'; } /* '' */
+.icon-database:before { content: '\f1c0'; } /* '' */
+.icon-clan:before { content: '\f22c'; } /* '' */

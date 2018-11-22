@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000" />
+    <meta charset="utf-8">
+    <link rel="icon" href="internet.png">
+    <title>Muse</title>
+  </head>
+  <body>
+    <div id="view"></div>
+  </body>
+  <!-- Mainframe -->
+  <script type="text/html" id="mainframe">
+    <div>
+      <h2 id="title"><a href="<%= window.location.origin %>"><img src="internet.png"></a><%= title %></h2>
+      <p><%= body %></p>
+      <% for ( var i = 0; i < Object.keys(worlds).length; i++ ) { %>
+        <a class="world" href="<%= worlds[Object.keys(worlds)[i]].link %>">
+          <img src="<%= worlds[Object.keys(worlds)[i]].img %>"><p><%= capitalize(Object.keys(worlds)[i]) %> &\#9755</p>
+        </a>
+      <% } %>
+    </div>
+  </script>
+  <!-- Artboard -->
+  <script type="text/html" id="artboard">
+    <h2 id="title"><a href="#"><img src="internet.png"></a><%= title %></h2>
+    <% if (body != '') { %><p><%= body %></p><% } %>
+    <% if (worlds != 'nil') { for ( var i = 0; i < Object.keys(worlds).length; i++ ) { %>
+      <a class="world" href="<%= worlds[Object.keys(worlds)[i]].link %>">
+        <img src="<%= worlds[Object.keys(worlds)[i]].img %>"><p><%= capitalize(Object.keys(worlds)[i]) %> &\#9755</p>
+      </a>
+    <% } } %>
+    <div class="artboard-frame">
+      <% shuffle(imgs); for ( var i = 0; i < imgs.length; i++ ) { %>
+        <img class="boardimg" src="<%=imgs[i]%>" onclick="window.open(this.src)"></img>
+      <% } %>
+    </div>
+  </script>
+  <script src="data.js"></script>
+  <script src="system.js"></script>
+  <style>
+    body { margin: 10px; background-color: black; font-family: sans-serif }
+    h2, a, p { color: white; margin: 0; }
+    p a { margin: none }
+    #title { display: flex; align-items: center; margin: 5px 0 5px 0 }
+    #title img { padding: 5px 5px 0 0; }
+    .world { color: black; margin: 7px 7px 0 0 }
+    .world:hover { color: white; }
+    .world img { border-radius: 5px; }
+    .artboard-frame { padding-top: 1rem }
+    @media ( min-width: 600px ) { /* Desktop */
+      .world { float: left; }
+      .artboard-frame { clear: both; display: flex; flex-flow: row wrap; justify-content: center }
+      .boardimg { padding: 3px; height: 50vh; width: auto; cursor: pointer }
+    }
+    @media ( max-width: 600px ) { /* Mobile */
+      .world { display: flex; align-items: center }
+      .world img { max-width: 100px }
+      .world p { margin-left: 10px }
+      .boardimg { padding-bottom: 6px; max-width: 100%; display: block; margin-left: auto; margin-right: auto }
+    }
+  </style>
+</html>

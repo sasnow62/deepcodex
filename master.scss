@@ -1,0 +1,35 @@
+$bg-color: black;
+$text-color: white;
+$link-color: #a2a017;
+$master-font: sans serif;
+$base-font: sans serif;
+
+@import 'fonts/enki/css/enki-codes.css';
+@import 'fonts/enki/css/enki.css';
+
+@font-face {
+  font-family: arkitech;
+  src: url("fonts/arkitech.otf") format("opentype");
+}
+
+body {
+  margin: 0;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $base-font;
+}
+
+a {
+  color: $link-color; text-decoration: none; font-weight: bold;
+  &:hover { color: lighten($link-color, 20%) }
+}
+
+#status { margin: 0 }
+
+.content {
+  padding: 50px;
+
+  p { margin-block-start: 0.5em; margin-block-end: 0.5em; }
+
+  h3 { text-align: center; font-family: $master-font; }
+}

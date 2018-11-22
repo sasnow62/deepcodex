@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600px" height="600px">
+  <!-- base color -->
+  <rect x="0" y="0" width="600" height="600" fill="#35ad8d" />
+  <!-- mandala -->
+  <circle cx="300" cy="300" r="300" fill="#279f28" />
+  <circle cx="300" cy="300" r="200" fill="#bdb001" />
+  <circle cx="300" cy="300" r="120" fill="#ffb800" />
+  <circle cx="300" cy="300" r="70" fill="#ebff00" />
+  <!-- pyramids -->
+  <path d="M 60 0 L 300 240 L 540 0" fill="#5c551b"/>
+  <path d="M 600 60 L 360 300 L 600 540" fill="#5e5012"/>
+  <path d="M 60 600 L 300 360 L 540 600" fill="#7d791b"/>
+  <path d="M 0 60 L 240 300 L 0 540" fill="#86b43c"/>
+</svg>
