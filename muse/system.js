@@ -1,8 +1,9 @@
 // DeepCodex Muse System
 
 // Router Init - Source: http://joakim.beng.se/blog/posts/a-javascript-router-in-20-lines.html
-var routes = {}; function route(path, templateId, controller) {
-  routes[path] = {templateId: templateId, controller: controller};
+var routes = {};
+function route(path, templateId, controller) {
+  routes[path] = { templateId: templateId, controller: controller };
 }
 
 // Routes
@@ -46,16 +47,17 @@ route('/india', 'artboard', function () {
       img: 'worlds/india/arch.jpg'
     }
   }
-  this.imgs = showcase('india')
-  // "https://cdn.shopify.com/s/files/1/0969/9128/products/minia_7_54294e38-c036-4a48-afdb-0840fd97c5dc.jpg?v=1518871179"
+    this.imgs = showcase('india')
 });
+
 route('/india/panicker', 'artboard', function () {
   this.title = 'K.C.S Panicker'
   this.body = 'A metaphysical and abstract painter from the 60s and 70s that drew on ancient sources. '
             + '<a target="_blank" href="https://en.wikipedia.org/wiki/K._C._S._Paniker">Wiki</a>'
   this.worlds = 'nil'
   this.imgs = data.india.panicker
-})
+});
+
 route('/india/arch', 'artboard', function () {
   this.title = 'Architecture'
   this.body = 'A sampling of the architecture of India'
@@ -69,12 +71,14 @@ route('/future', 'artboard', function () {
   this.worlds = 'nil'
   this.imgs = data.future.gonzalez
 });
+
 route('/ksbd', 'artboard', function () {
   this.title = 'Kill Six Billion Demons'
   this.body = 'Art by <a href="https://killsixbilliondemons.com">Abbadon</a>'
   this.worlds = 'nil'
   this.imgs = data.ksbd
 });
+
 route('/alchemy', 'artboard', function () {
   this.title = 'Collection of Alchemical Drawings'
   this.body = 'Guide to <a href="https://ultraculture.org/blog/2015/11/13/psychonaut-field-manual/">Chaos Magick</a>'
@@ -97,20 +101,23 @@ route('/champa', 'artboard', function () {
   }
   this.imgs = data.champa.mainframe
 });
+
 route('/champa/temples', 'artboard', function () {
   this.title = 'Temples'
   this.body = ''
   this.worlds = 'nil'
   this.imgs = data.champa.temples
-})
+});
+
 route('/champa/figures', 'artboard', function () {
   this.title = 'Figures'
   this.body = ''
   this.worlds = 'nil'
   this.imgs = data.champa.figures
-})
+});
 
-var el = null; function router () {
+var el = null;
+function router () {
   el = el || document.getElementById('view');
   var url = location.hash.slice(1) || '/';
   var route = routes[url];
@@ -119,19 +126,21 @@ var el = null; function router () {
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
 
-(function(){ // Simple JavaScript Templating by John Resig - https://johnresig.com/ - MIT Licensed
-  var cache = {};
-  this.tmpl = function tmpl(str, data){
-    var fn = !/\W/.test(str) ? cache[str] = cache[str] || tmpl(document.getElementById(str).innerHTML) :
-      new Function("obj", "var p=[], print = function() { p.push.apply(p, arguments) };with(obj){p.push('" + str
-        .replace(/[\r\t\n]/g, " ")
-        .split("<%").join("\t")
-        .replace(/((^|%>)[^\t]*)'/g, "$1\r")
-        .replace(/\t=(.*?)%>/g, "',$1,'")
-        .split("\t").join("');")
-        .split("%>").join("p.push('")
-        .split("\r").join("\\'")
-      + "');}return p.join('');");
+// Simple JavaScript Templating by John Resig - https://johnresig.com/ - MIT Licensed
+
+(function() {
+    var cache = {}
+    this.tmpl = function tmpl(str, data) {
+	var fn = !/\W/.test(str) ? cache[str] = cache[str] || tmpl(document.getElementById(str).innerHTML) :
+	    new Function("obj", "var p=[], print = function() { p.push.apply(p, arguments) };with(obj){p.push('" + str
+			 .replace(/[\r\t\n]/g, " ")
+			 .split("<%").join("\t")
+			 .replace(/((^|%>)[^\t]*)'/g, "$1\r")
+			 .replace(/\t=(.*?)%>/g, "',$1,'")
+			 .split("\t").join("');")
+			 .split("%>").join("p.push('")
+			 .split("\r").join("\\'")
+			 + "');}return p.join('');");
     return data ? fn( data ) : fn;
   };
 })();
@@ -144,9 +153,11 @@ function showcase(world) {
   }
   return shuffle(imgs).slice(0, 10)
 }
+
 function capitalize(word) {
   return word.replace(/^\w/, function (chr) { return chr.toUpperCase() })
 }
+
 function shuffle(array) {
   for (var i = array.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
