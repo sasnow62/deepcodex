@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="maya-snake.jpg">
+      <script src="lib/processing.min.js"></script>
+      <title>Deep Codex</title>
+    </head>
+    <body>
+      <img src="varaha-0.2-web.png" alt="varaha">
+      <canvas class="genesis" data-processing-sources="genesis.pde"></canvas>
+      <canvas class="invocation" data-processing-sources="invocation.pde"></canvas>
+      <!-- <canvas class="virus-network.pde" data-processing-sources="virus-network.pde"></canvas> -->
+    </body>
+    <style>
+      body { margin: 0; background-color: #000 } /* #070d2c */
+      div { border: 1px solid black }
+      img { position: absolute }
+      canvas { position: absolute; outline : none; cursor: pointer }
+      .genesis { height: 400px; left: 1700px; top: 350px }
+      .invocation { height: 200px; left: 340px;top: 680px }
+    </style>
+    <script src="system.js"></script>
+  </html>
